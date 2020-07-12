@@ -7,6 +7,7 @@ import { HoverdirectiveDirective } from './hoverdirective.directive';
 import { ScrolldirectiveDirective } from './scrolldirective.directive';
 import { FooterComponent } from './footer/footer.component';
 import { SectionTitleComponent } from './section-title/section-title.component';
+import { ProfileCardComponent } from './profile-card/profile-card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SectionTitleComponent } from './section-title/section-title.component';
     HoverdirectiveDirective,
     ScrolldirectiveDirective,
     FooterComponent,
-    SectionTitleComponent
+    SectionTitleComponent,
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule
