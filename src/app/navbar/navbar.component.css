@@ -44,3 +44,7 @@
 .navbar-nav .nav-link {
   position: relative;
 }
+
+.nav-menu.is-scrolling {
+    padding: 0;
+  }
