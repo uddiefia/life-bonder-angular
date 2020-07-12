@@ -10,7 +10,7 @@ export class ProfileCardComponent implements OnInit {
 
   constructor() { }
   teamMembers: Member[] = [
-    new Member('Jesper Simonsen', `It’s time for a change. I want to create a social media platform that lives up to the promise of what social media 
+    new Member('admin','Jesper Simonsen', `It’s time for a change. I want to create a social media platform that lives up to the promise of what social media 
     can be: a tool to facilitate human connections rather than replacing them. 
     I want to connect people in friendships that are human, profound and meaningful.`,
       "https://www.lifebonder.com/images/staff/jesper_Simonsen.jpg", "Full Stack Philosopher", "Founder & CTO", "Denmark",
@@ -20,7 +20,7 @@ export class ProfileCardComponent implements OnInit {
         instagram: "https://www.instagram.com/lifebonder_"
 
       }),
-    new Member('Flemming Ubbesen',
+    new Member('admin2','Flemming Ubbesen',
       `At the deep evolutionary core of who we are, we’re social animals. For too long, we’ve gradually been losing an existential battle with technology we shouldn’t have to fight. We can use technology for the better. And we will. That’s what we’re doing here.`
       , "https://www.lifebonder.com/images/staff/flemming.jpg", "DREAM ALCHEMIST", "Co-founder & CMO", "Denmark",
       {
@@ -29,7 +29,7 @@ export class ProfileCardComponent implements OnInit {
         instagram: "https://www.instagram.com/flemmingubbesen"
 
       }),
-    new Member('Mohammad R. Hasan',
+    new Member('team','Mohammad R. Hasan',
       `As a developer I have done remote works for agencies, startups and collaborated with talented people to create digital products all over the world. I joined LifeBonder because they have very innovative idea. I want to help building the NextGen in social media platform.`
       , "https://www.lifebonder.com/images/staff/hasan.jpg", "FULL STACK WIZARD", "Full Stack Developer", "Bangladesh",
       {
@@ -37,6 +37,14 @@ export class ProfileCardComponent implements OnInit {
         github: "https://github.com/pori468"
       })]
   ngOnInit(): void {
+  }
+
+  objectKeys(obj: {}) {
+    return Object.keys(obj);
+  }
+
+  countSocial(obj: {}) {
+    return Object.keys(obj).length;
   }
 
 }

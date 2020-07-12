@@ -1,6 +1,21 @@
 <div class="row">
-  <div class="col-12 col-lg-6" *ngFor="let member of teamMembers">
-    <div class="wrapper purple">
+  <div
+    [class]="
+      member.type === 'admin' || member.type === 'admin2'
+        ? 'col-12 col-lg-6'
+        : 'col-12 col-lg-4'
+    "
+    *ngFor="let member of teamMembers"
+  >
+    <div
+      [class]="
+        member.type === 'admin'
+          ? 'wrapper purple spec'
+          : member.type === 'admin2'
+          ? 'wrapper purple spec2'
+          : 'wrapper purple'
+      "
+    >
       <div class="profile">
         <h4>{{ member.country | titlecase }}</h4>
         <img [src]="member.imagePath" alt="" class="thumbnail" />
@@ -9,13 +24,19 @@
         <p class="subtitle">{{ member.subtitle | titlecase }}</p>
         <p class="description">{{ member.desc }}</p>
       </div>
-      <div class="social-icons">
+      <div
+        [class]="
+          countSocial(member.social) < 3
+            ? 'social-icons double'
+            : 'social-icons'
+        "
+      >
         <div
-          class="icon facebook"
+          class="icon {{ social }}"
           *ngFor="let social of objectKeys(member.social)"
         >
           <a [href]="member.social[social]" target="_blank">
-            <i class="ti-facebook"></i>
+            <i class="ti-{{ social }}"></i>
           </a>
           <p>{{ social | titlecase }}</p>
         </div>

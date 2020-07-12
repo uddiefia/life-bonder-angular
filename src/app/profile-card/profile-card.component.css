@@ -9,6 +9,16 @@
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
   }
   
+  .wrapper.spec {
+    margin-left: auto;
+    margin-right: 0px;
+  }
+  
+  .wrapper.spec2 {
+    margin-left: 0px;
+    margin-right: auto;
+  }
+
  .profile {
     margin-top: 1.5em;
     position: relative;
@@ -122,6 +132,29 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  .ti-facebook:before {
+    content: "\e741";
+  }
+  .icon.facebook a,
+  .icon.behance a,
+  .icon.website a {
+    background: linear-gradient(to bottom right, #0d47a1, #4488f0);
+  }
+  .ti-instagram:before {
+    content: "\e73d";
+  }
+  .icon.instagram a {
+    background: linear-gradient(to bottom right, #6b14a6, #c90a6d);
+  }
+  .icon.linkedin a {
+    background: linear-gradient(to bottom right, #2962ff, #7096ff);
+  }
+  .icon.github a {
+    background: linear-gradient(to bottom right, #333333, #333333);
+  }
+  .icon.twitter a {
+    background: linear-gradient(to bottom right, #00acee, #5cd2ff);
+  }
   .wrapper .social-icons .icon p {
     color: rgb(128, 134, 155);
     font-size: 11px;
@@ -136,3 +169,17 @@
     margin-left: -15px;
   }
   
+  
+.double {
+    justify-content: space-evenly !important;
+  }
+  
+  .ti-linkedin:before {
+    content: "\e735";
+  }
+  .ti-github:before {
+    content: "\e73f";
+  }
+  .ti-website:before {
+    content: "\e665";
+  }
